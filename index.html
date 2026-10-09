@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects and Arrays Assignment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 30px;
+            color: #1c1e21;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        h1 {
+            margin-top: 0;
+            color: #1a252f;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #166fe5;
+        }
+        .info-panel {
+            background-color: #e7f3ff;
+            border-left: 5px solid #1877f2;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 15px;
+        }
+        .card {
+            background: #f7f8fa;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            color: white;
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dealership Inventory System</h1>
+        <p>Demonstrating JavaScript Objects, Object Methods, Arrays, and Array Methods.</p>
+
+        <div class="controls">
+            <button onclick="displayAllVehicles()">Show All Inventory (.forEach)</button>
+            <button onclick="filterInStock()">Filter Available Cars (.filter)</button>
+            <button onclick="addNewCar()">Add New Car (.push)</button>
+            <button onclick="showStoreSummary()">Store Summary (Object Method)</button>
+        </div>
+
+        <div id="store-info" class="info-panel" style="display: none;">
+            <!-- Store summary populated by Object Method -->
+        </div>
+
+        <div id="vehicle-grid" class="grid">
+            <!-- Dynamic vehicle cards rendered here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
